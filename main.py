@@ -19,7 +19,7 @@ import numpy as np
 # dimensions
 print("[INFO] loading input image and source image...")
 # image = cv2.imread(args["image"])
-image = cv2.imread("test.png")
+image = cv2.imread("Markers/marker2.png")
 # image = imutils.resize(image, width=600)
 (imgH, imgW) = image.shape[:2]
 # load the source image from disk
@@ -136,9 +136,25 @@ output = output.astype("uint8")
 
 # show the input image, source image, output of our augmented reality
 frame_markers = cv2.aruco.drawDetectedMarkers(image.copy(), corners, ids)
-cv2.imshow("Detected Markers", frame_markers)
-# cv2.imshow("Source", source)
-cv2.imshow("OpenCV AR Output", output)
+
+marker_window = "Detected Marker"
+cv2.namedWindow(marker_window)        # Create a named window
+cv2.moveWindow(marker_window, 40,30)  # Move it to (40,30)
+cv2.imshow(marker_window, frame_markers)
+
+
+source_window = "Input Image"
+cv2.namedWindow(source_window)        # Create a named window
+cv2.moveWindow(source_window, 40,30)  # Move it to (40,30)
+cv2.imshow(source_window, source)
+
+
+output_window = "OpenCV AR Output"
+cv2.namedWindow(output_window)        # Create a named window
+cv2.moveWindow(output_window, 40,30)  # Move it to (40,30)
+cv2.imshow(output_window, output)
+
+
 cv2.waitKey(0)
 
 """python opencv_ar_image.py --image examples/input_02.jpg 
