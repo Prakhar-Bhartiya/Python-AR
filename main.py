@@ -4,7 +4,7 @@ import imutils
 import sys
 import numpy as np
 
-
+# ARUCO Basics : https://mecaruco2.readthedocs.io/en/latest/notebooks_rst/Aruco/aruco_basics.html
 
 # # construct the argument parser and parse the arguments
 # ap = argparse.ArgumentParser()
