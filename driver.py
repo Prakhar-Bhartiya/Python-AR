@@ -12,8 +12,7 @@ def find_and_warp(frame, source, cornerIDs, arucoDict, arucoParams, useCache=Fal
 	(imgH, imgW) = frame.shape[:2]
 	(srcH, srcW) = source.shape[:2]
     # detect AruCo markers in the input frame
-	(corners, ids, rejected) = cv2.aruco.detectMarkers(
-		frame, arucoDict, parameters=arucoParams)
+	(corners, ids, rejected) = cv2.aruco.detectMarkers(frame, arucoDict, parameters=arucoParams)
 	# if we *did not* find our four ArUco markers, initialize an
 	# empty IDs list, otherwise flatten the ID list
 	ids = np.array([]) if len(corners) != 4 else ids.flatten()
@@ -88,10 +87,8 @@ def find_and_warp(frame, source, cornerIDs, arucoDict, arucoParams, useCache=Fal
 	# mask (giving more weight to the input where there
 	# *ARE NOT* masked pixels), and (3) adding the resulting
 	# multiplications together
-	warpedMultiplied = cv2.multiply(warped.astype("float"),
-		maskScaled)
-	imageMultiplied = cv2.multiply(frame.astype(float),
-		1.0 - maskScaled)
+	warpedMultiplied = cv2.multiply(warped.astype("float"), maskScaled)
+	imageMultiplied = cv2.multiply(frame.astype(float), 1.0 - maskScaled)
 	output = cv2.add(warpedMultiplied, imageMultiplied)
 	output = output.astype("uint8")
 	# return the output frame to the calling function
