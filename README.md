@@ -7,3 +7,5 @@ Trying to build Augmented Reality experience using python OpenCV.
 
 ### Day 2
 
+https://user-images.githubusercontent.com/61538582/200516394-1c307c1d-94f5-475a-b8b2-35fc7872e198.mp4
+
