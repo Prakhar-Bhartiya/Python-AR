@@ -17,5 +17,5 @@ https://user-images.githubusercontent.com/61538582/200516394-1c307c1d-94f5-475a-
 ### Day 4 :
 > Tested [Hand gesture](https://google.github.io/mediapipe/solutions/hands.html) based trigger system for Augmented Image. <br> Observation : Good tracking but takes alot of time for initialization + low fps count - optimization required. 
 
-https://user-images.githubusercontent.com/61538582/201499694-499ab6fc-b49a-4614-9354-011e2d8d19e1.mp4
+https://user-images.githubusercontent.com/61538582/201499753-6f3f68bd-825f-40b8-b31d-949e1e594a68.mp4
 
